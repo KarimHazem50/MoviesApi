@@ -1,6 +1,4 @@
-﻿using MoviesApi.Models;
-
-namespace MoviesApi.Data
+﻿namespace MoviesApi.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -13,6 +11,7 @@ namespace MoviesApi.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Genre>? Genres { get; set; }
+        public DbSet<Genre> Genres { get; set; } = null!;
+        public DbSet<Movie> Movies { get; set; } = null!;
     }
 }

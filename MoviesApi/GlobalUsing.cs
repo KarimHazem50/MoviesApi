@@ -2,3 +2,8 @@
 global using MoviesApi.Data;
 global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
+global using Microsoft.AspNetCore.Mvc;
+global using MoviesApi.Core.Models;
+global using MoviesApi.Core.Dtos;
+global using MoviesApi.Core.Consts;
+global using MoviesApi.Services;

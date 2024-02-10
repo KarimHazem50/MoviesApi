@@ -13,6 +13,8 @@ builder.Services.AddCors(corsOptions => {
     });
 });
 
+builder.Services.AddTransient<IImageServices, ImageServices>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -71,5 +73,7 @@ app.UseCors("MyPolicy");
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseStaticFiles();
 
 app.Run();
