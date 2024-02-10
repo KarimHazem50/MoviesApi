@@ -1,4 +1,4 @@
-﻿namespace MoviesApi.Models
+﻿namespace MoviesApi.Core.Models
 {
     public class Genre
     {
@@ -7,5 +7,7 @@
 
         [MaxLength(100)]
         public string Name { get; set; } = null!;
+
+        //public IList<Movie> Movies { get; set; } = new List<Movie>();
     }
 }
