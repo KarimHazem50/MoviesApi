@@ -1,4 +1,6 @@
-﻿namespace MoviesApi.Controllers
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace MoviesApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
@@ -18,6 +20,7 @@
             return Ok(genres);
         }
 
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public async Task<IActionResult> GetByIdAsync(byte id)
@@ -74,7 +77,7 @@
             return Ok(genre);
         }
 
-
+        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> DeleteGenreAsync(byte id)

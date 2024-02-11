@@ -7,3 +7,5 @@ global using MoviesApi.Core.Models;
 global using MoviesApi.Core.Dtos;
 global using MoviesApi.Core.Consts;
 global using MoviesApi.Services;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.AspNetCore.Identity;
