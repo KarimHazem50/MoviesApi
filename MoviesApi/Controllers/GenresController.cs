@@ -2,6 +2,7 @@
 
 namespace MoviesApi.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class GenresController : ControllerBase
@@ -20,7 +21,6 @@ namespace MoviesApi.Controllers
             return Ok(genres);
         }
 
-        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public async Task<IActionResult> GetByIdAsync(byte id)
@@ -77,7 +77,6 @@ namespace MoviesApi.Controllers
             return Ok(genre);
         }
 
-        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> DeleteGenreAsync(byte id)

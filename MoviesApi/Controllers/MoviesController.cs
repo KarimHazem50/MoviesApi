@@ -1,5 +1,8 @@
-﻿namespace MoviesApi.Controllers
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace MoviesApi.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class MoviesController : ControllerBase
